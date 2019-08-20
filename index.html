@@ -4,12 +4,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Scriptie Deveny Faruque</title>
+        <title>DEVENY FARUQUE</title>
         <meta name="description" content="uhu">
+
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script><style>
    body,
 html {
   width: 100%;
@@ -25,6 +25,12 @@ body {
   color: aliceblue;
   user-select: none;
   font-family: Helvetica;
+  .transition(filter, 0.2s, ease, 0);
+    &.state-1 { filter: none; }
+	&.state-2 { filter: grayscale(100%); }
+	&.state-3 { filter: hue-rotate(90deg); }
+	&.state-4 { filter: hue-rotate(30deg); }
+	&.state-5 { filter: invert(100%); }
 }
 #theperiphery {
   pointer-events: none;
@@ -63,6 +69,7 @@ body {
   height: auto;
 }
 .choice p {
+        line-height: 1.5;
   pointer-events: none;
   display: block;
   color: transparent;
@@ -139,7 +146,7 @@ h6 {
 }
 .choice a {
   vertical-align: super;
-  font-size: 0.4rem;
+  font-size: 0.7rem;
   color: transparent;
   text-decoration: none;
 }
@@ -174,7 +181,7 @@ The domain name .net is a generic top-level domain used in the Domain Name S
                 
 Along with the Internet Protocol (IP-system) the Domain Name System places every user, every machine, every host in a grid and names it. The DNS is a spatial map of the Internet. Every URL or email address is a unique location with a specific address on this electronic map. Thus in an urban analogy the internet produced a new country, state, neighbourhood or whatever word is accurate to describe this ever-growing place. To travel on this electronic map takes such little time that we cannot compare it to the travel speed of the world of flesh and embodiment. Not only because in the world of flesh we deal with gravity, weight, time and physical distance but because the world of electronic information is free of roads. At the click of a mouse you are ready to jump from any point to another. In fact, there is a one-way route from every location to any other location on the map and these roads are made for air traffic. The electronic information world is in fact a globally connected village where transportation takes place at such a speed that we can speak of simultaneity. It means being here, there and everywhere all at once; a new kind of geography.  </p></div>
 <div class="choice" id="cake">
-<p id="anonymity">
+<p id="anonimity">
 A brand-name comes with <span>authorial anonymity</span> (or at least the acknowledgement of dispersed authorship). This anonymity keeps you, as the viewer, in the dark and eventually leaves a lot to your imagination as well. The master mind can obscure itself and its intentions with a powerful instrument: <span>fiction</span>. The difference between fiction and imagination lies in the reciprocal character of both. Fiction is what presented to you and your imagination is needed to understand the fiction constructed for its reader or its spectator. Both these terms (ideas, concepts) have little to do with the imaginary, as in the magical, as in fantasy or the unreal. 
 
 In a conversation held in 2014 by Erik Hagoort, he initiated an attempt to have this conversation as if the participants were an <span>orchestra without conductor</span>. They tried to avoid questions and answers in their attempt to exclude authority and hierarchy. A few interesting lines are drawn between art and empathy in this conversation: an understanding of empathy as an act of imagination is an evident, undeniable bridge between art and morality, perhaps the cake and myself. Your imagination allows you to see yourself as if you were in another's position. This aspect of empathy is closer to aesthetics and the visual image than we would assume. Apparently the word <i>'path'</i> in Classical Greek means <i>'to suffer, to feel'</i>. The Classical Greek word is much more closer to a visual approach on feeling: seeing as if it is real, moving into another feeling. <a href="/references.html">1</a>
@@ -343,7 +350,8 @@ $(document).ready(function(){
         $(this).css({color:'black',filter:'none',cursor:'text'});
         $(this).off('mouseenter mouseleave');
         $(this).siblings("span").off('mouseenter mouseleave').css({color:'black',filter:'none',cursor:'text'});
-        $(this).parent('p').siblings().fadeOut();
+        $(this).siblings("a").css({color:'black',filter:'none',});
+        $(this).parent('p').siblings().hide();
         $(this).parents(".choice").height($(this).parent('p').height());
     });
     $("span").hover(function(){
@@ -356,7 +364,7 @@ $(document).ready(function(){
     });
     
 $("#howto").click(function(){
-    $("#manual").fadeToggle();
+    $("#manual").toggle();
     $("#theonlyway").toggleClass("cantread");
 });    
 $("h1:first").click(function(){
@@ -379,15 +387,7 @@ $("p span").click(function(){
     var nu = $(this).parent("p").attr('id');
     $("#on-"+nu).show();
 });
-
-$("#visuals").toggle(
-  function(){$("#theonlyway, #theperiphery").css({"filter": "invert(100%)"});},
-  function(){$("#theonlyway, #theperiphery").css({"filter": "hue-rotate(90deg)"});},
-  function(){$("#theonlyway, #theperiphery").css({"filter": "grayscale(100%)"});},
-  function(){$("#theonlyway, #theperiphery").css({"filter": "none"});});
-
 });
-   
 </script>
 </html>
 
