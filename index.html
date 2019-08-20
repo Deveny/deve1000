@@ -18,9 +18,8 @@
     }
     * {
   box-sizing: border-box;
-}
-    body{background-image: underconstruction2.jpg;
-    background-position: center;
+    }
+    body{ background-position: center;
     color:aliceblue;
     user-select: none;
     font-family: Helvetica;}
@@ -35,8 +34,8 @@
     margin:auto;  left: 0; right: 0; display: none; overflow-y: scroll;position: fixed;}
     .choice{width: 30em; position:relative; display: none; 0; padding:1em; height: auto;}
     .choice p{  pointer-events: none; display: block;
-color:transparent;white-space: pre-wrap;font-size: 0.875em;position: absolute; top: 0;}
-    .choice p span{pointer-events: auto;}
+        color:transparent;white-space: pre-wrap;font-size: 0.875em;position: absolute; top: 0;}
+    .choice p span, .choice a{pointer-events: auto;}
     #sponge img{display: inline-block;box-shadow: 1px 1px 1em black; }
     .choice img{margin: auto; display: block; box-shadow: 1px 1px 1em black;}
 
@@ -51,6 +50,7 @@ color:transparent;white-space: pre-wrap;font-size: 0.875em;position: absolute; t
     right: 1em;}
     #nav a{color: white}
     #manual{
+  overflow: auto;
         font-style:italic;
             border:1px double white;
         padding: 3em;
@@ -74,7 +74,7 @@ color:transparent;white-space: pre-wrap;font-size: 0.875em;position: absolute; t
         background-color: lightgreen;
         font-size: 2rem;
     }
-    
+    h6{font-weight: 100;}
     .choice a{
     vertical-align: super;
     font-size: 0.4rem;}
@@ -95,12 +95,12 @@ The need for words came to an end when I longed for the days as a sponge. It was
         <div id="theonlyway">
         <div id="entrance"><h1>DEVE1000</h1>.<h1>NET</h1></div>
         <div class="choice" id="start">
-            <p><img src="img/cakereal.jpg" width="80%"><br><img src="img/cakefake.jpg" width="80%"> <br><br>The cake in the first photograph dates from last year. It was baked and eaten by my friend — now also my neighbour — around the days of my birthday that year. I have never seen the real cake. Only months after when I digitally created the second picture for an exhibition catalogue with online templates of PhotoFunia, I received this picture of the real cake from my friend. She never gave me the birthday cake because she didn’t feel like attending the party, so she ate the cake instead. 
+            <p id="deve1000"><img src="img/cakereal.jpg" width="80%"><br><img src="img/cakefake.jpg" width="80%"> <br><br>The cake in the first photograph dates from last year. It was baked and eaten by my friend — now also my neighbour — around the days of my birthday that year. I have never seen the real cake. Only months after when I digitally created the second picture for an exhibition catalogue with online templates of PhotoFunia, I received this picture of the real cake from my friend. She never gave me the birthday cake because she didn’t feel like attending the party, so she ate the cake instead. 
 
 To still the hunger for digestible art and as a response to the homogenization of taste, I chose to present myself as a sweet fruit cake. ‘DEVE1000’ is a name for my brand of being, invented a few years ago. At first it was designed to satirically thrive in the wave of hashtags, but it very fast became a comfortable tool to manage life within the public arena. A multi-tool, as it were, one you can use outdoors, indoors, during all seasons and in all kinds of scenarios. The public arena is another title for the bigger bubble. There is no fear in admitting that I - as most others - find my self in a tiny bubble that is shielded off from a larger part of the bigger bubble, the one that includes the space outside of the systems of museums, galleries, art education and also includes these bubbles in itself too. 
 
 To match the futuristic identity of innovation the number ‘1000’ was added to my new name, as an impressive element of numerical measurability. It could be read as an improved version of me, the latest edition, refurbished. If a first name would refer to the craftsman you are, and your last name to the philosopher you are then it is certain that as an artist we all need third name for the entrepreneur we are.  </p>            
-            <p>
+            <p id="network">
                 The domain name .net is a generic top-level domain used in the Domain Name System of the Internet. The name is derived from the word network.
                 
                 The word network hints two contexts: mass-media networks with a cybernetic echo to it but also management terminology. The first sounds very impersonal and robotic while the second suggests a kind of social Machiavellianism. 
@@ -271,7 +271,8 @@ $("p").not("span").css("pointer-events","none");
     });
     $("span").hover(function(){
         $(this).parent('p').css({color:'black',filter:'blur(1px)',});
-        $("span").not(this, $(this).siblings()).css("opacity","0");
+        $("span").not(this, $(this).siblings()).css("opacity","1");
+        $("span").not($(this).siblings()).css("opacity","1");
                     }, function(){ 
         $(this).parent('p').css({color:'transparent',filter:'none'});
         $("span").not(this, $(this).siblings()).css("opacity","1");
@@ -283,14 +284,15 @@ $("#howto").click(function(){
 });    
 $("h1:first").click(function(){
     $("#start").show();
-    $("#start p:first-of-type").css({color:'black',filter:'none',});
+    $("#deve1000").css({color:'black',filter:'none',});
     $("#cake").fadeIn();
     $("#entrance").fadeOut();
     $(".choice").height($('.choice').children('p').height());
 });
-$("h1:2nd-of-type").click(function(){
+$("h1:last").click(function(){
+    $("img").remove();
    $("#start").show();
-    $("#start p:2nd-of-type").css({color:'black',filter:'none',});
+    $("#network").css({color:'black',filter:'none',});
     $("#net").fadeIn();
     $("#entrance").fadeOut();
     $(".choice").height($('.choice').children('p').height());
@@ -304,8 +306,6 @@ $("p span").click(function(){
 $('#theonlyway').on('scroll', function () {
     $('#sponge').scrollTop($(this).scrollTop());
 }); 
-    
-        $( "img" ).draggable();
 
 });
    
