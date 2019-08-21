@@ -172,7 +172,7 @@ The need for words came to an end when I longed for the days as a sponge. It was
         <div id="entrance"><h1>DEVE1000</h1>.<h1>NET</h1></div>
         <div class="choice" id="start">
             <p id="deve1000"><img src="img/cakereal.jpg" width="80%"><br><img src="img/cakefake.jpg" width="80%"> <br><br>
-The cake in the first photograph dates from last year. It was baked and eaten by my friend — now also my neighbour — around the days of my birthday that year. I have never seen the real cake. Only months after when I digitally created the second picture for an exhibition catalogue with online templates of PhotoFunia, I received this picture of the real cake from my friend. She never gave me the birthday cake because she didn’t feel like attending the party, so she ate the cake instead. 
+The cake in the first photograph dates from last year. It was baked and eaten by my friend — now also my neighbour — around the days of my birthday that year. I have never seen the real cake. Only months after, when I digitally created the second picture for an exhibition catalogue with online templates of PhotoFunia, I received this picture of the real cake from my friend. She never gave me the birthday cake because she didn’t feel like attending the party, so she ate the cake instead. 
 <br><br>
 To still the hunger for digestible art and as a response to the homogenization of taste, I chose to present myself as a sweet fruit cake. ‘DEVE1000’ is a name for my brand of being, invented a few years ago. At first it was designed to satirically thrive in the wave of hashtags, but it very fast became a comfortable tool to manage life within the public arena. A multi-tool, as it were, one you can use outdoors, indoors, during all seasons and in all kinds of scenarios. The public arena is another title for the bigger bubble. There is no fear in admitting that I - as most others - find my self in a tiny bubble that is shielded off from a larger part of the bigger bubble, the one that includes the space outside of the systems of museums, galleries, art education and also includes these bubbles in itself too. 
 <br><br>
@@ -392,33 +392,37 @@ $('#visuals').click(function(){
 if ($("#theperiphery, #theonlyway").hasClass("state-1")) {
     $("#theperiphery, #theonlyway").removeClass("state-1")
     $("#theperiphery, #theonlyway").addClass("state-2")
+            $("img").css("filter","none")
 }
 else if($("#theperiphery, #theonlyway").hasClass("state-2")) {
     $("#theperiphery, #theonlyway").removeClass("state-2")
     $("#theperiphery, #theonlyway").addClass("state-3")
+            $("img").css("filter","hue-rotate(-290deg)")
 }
 else if($("#theperiphery, #theonlyway").hasClass("state-3")){
     $("#theperiphery, #theonlyway").removeClass("state-3")
     $("#theperiphery, #theonlyway").addClass("state-4")
+            $("img").css("filter","hue-rotate(-190deg)")
 }
 else if($("#theperiphery, #theonlyway").hasClass("state-3")) {
     $("#theperiphery, #theonlyway").removeClass("state-3")
     $("#theperiphery, #theonlyway").addClass("state-4")
+            $("img").css("filter","none")
 }
 else if($("#theperiphery, #theonlyway").hasClass("state-4")){
     $("#theperiphery, #theonlyway").removeClass("state-4")
     $("#theperiphery, #theonlyway").addClass("state-5")
+    $("img").css("filter","invert(100%)");
 }
 else if($("#theperiphery, #theonlyway").hasClass("state-5")){
     $("#theperiphery, #theonlyway").removeClass("state-5")
+        $("img").css("filter","none")
 }
 else {
     $("#theperiphery, #theonlyway").addClass("state-1")
+        $("img").css("filter","invert(100%) hue-rotate(-260deg)")
 }
     
-if($("#theperiphery").css("filter","invert(100%)")){
-     $("img").css("filter","invert(100%)")
-     }
 });
 
 });
