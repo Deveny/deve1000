@@ -172,7 +172,7 @@ The need for words came to an end when I longed for the days as a sponge. It was
         <div id="entrance"><h1>DEVE1000</h1>.<h1>NET</h1></div>
         <div class="choice" id="start">
             <p id="deve1000"><img src="img/cakereal.jpg" width="80%"><br><img src="img/cakefake.jpg" width="80%"> <br><br>
-The cake in the first photograph dates from last year. It was baked and eaten by my friend — now also my neighbour — around the days of my birthday that year. I have never seen the real cake. Only months after when I digitally created the second picture for an exhibition catalogue with online templates of PhotoFunia, I received this picture of the real cake from my friend. She never gave me the birthday cake because she didn’t feel like attending the party, so she ate the cake instead. 
+The cake in the first photograph dates from last year. It was baked and eaten by my friend — now also my neighbour — around the days of my birthday that year. I have never seen the real cake. Only months after, when I digitally created the second picture for an exhibition catalogue with online templates of PhotoFunia, I received this picture of the real cake from my friend. She never gave me the birthday cake because she didn’t feel like attending the party, so she ate the cake instead. 
 <br><br>
 To still the hunger for digestible art and as a response to the homogenization of taste, I chose to present myself as a sweet fruit cake. ‘DEVE1000’ is a name for my brand of being, invented a few years ago. At first it was designed to satirically thrive in the wave of hashtags, but it very fast became a comfortable tool to manage life within the public arena. A multi-tool, as it were, one you can use outdoors, indoors, during all seasons and in all kinds of scenarios. The public arena is another title for the bigger bubble. There is no fear in admitting that I - as most others - find my self in a tiny bubble that is shielded off from a larger part of the bigger bubble, the one that includes the space outside of the systems of museums, galleries, art education and also includes these bubbles in itself too. 
 <br><br>
@@ -210,7 +210,7 @@ Elaborating on this idea of network or multiplicity Calvino clarifies that for o
 <p id="dispersed">
 A brand-name comes with the acknowledgement of <span>dispersed authorship</span> (or even authorial anonymity). An art practice, as we now know, is fragmented into multiple roles or tasks. Whether all your pieces in the art game are controlled by yourself, is up to you. I am not thinking of architectural practices and industrial workshops like Olafur Eliason, Jef Koons or Atelier Van Lieshout, as there is little doubt in stating that we are all our own brand or company even without a few dozen employees. One or many, all a shared slightly corporate personality. The philosopher, the craftsman and the entrepreneur are in most of the cases only you, the artist, the <span>master-multitasker</span> by default. One or many, all a shared slightly corporate personality. 
 <br><br><br><br>
-Some master-multitaskers might like to think of themselves as free and <span>autonomous</span> artists because they are not depending on others to complete their one-man team, free from authority, systems and institutions. Others might have already discovered that to not be burdened by the weight of authority all by yourself it is best to team up. Humans have always been surviving relationally, so the network is most definitely not to be denied. <i>"Artist like to boast of their independence from market and state. Even their reliance on social relationships and networks is still a sensitive issue. In the name of artistic freedom almost any form of commitment will be denied."</i><a href="/references.html"> 7</a> Two things are said here. In his statement there is a hint of artistic autonomy but also of social autonomy. Artistic autonomy implies this freedom of content, style or an independence related to a form of authority. While social autonomy talks about reclusion or this myth of the self-made man. Already in the 80's the artist is not only the eccentric, bohemien outsider but also a model citizen, creative entrepreneur, self-made man or even self-made entrepreneurial citizen. Yet the romance of nomadism hasn't left us yet. Geographical mobility, flexibility, global networking are musts to the life of the bienale-hopping artist, traveling from one non-place to the next.<a href="/references.html"> 7</a>
+Perhaps as a master-multitasker you would like to be a free and <span>autonomous</span> artist because you would rather not depend on others to complete your one-man team, free from authority, systems and institutions. Others might have already discovered that to not be burdened by the weight of authority all by yourself it is best to team up. Humans have always been surviving relationally, so the network is most definitely not to be denied. <i>"Artist like to boast of their independence from market and state. Even their reliance on social relationships and networks is still a sensitive issue. In the name of artistic freedom almost any form of commitment will be denied."</i><a href="/references.html"> 7</a> Two things are said here. In his statement there is a hint of artistic autonomy but also of social autonomy. Artistic autonomy implies this freedom of content, style or an independence related to a form of authority. While social autonomy talks about reclusion or this myth of the self-made man. Already in the 80's the artist is not only the eccentric, bohemien outsider but also a model citizen, creative entrepreneur, self-made man or even self-made entrepreneurial citizen. Yet the romance of nomadism hasn't left us yet. Geographical mobility, flexibility, global networking are musts to the life of the bienale-hopping artist, traveling from one non-place to the next.<a href="/references.html"> 7</a>
 <br><br>
 There is a vivid aura of inauthenticity around the consideration of your practice or artwork in economic terms. To exclude the economic aspect of art from this discourse would offer an ignorant view. There is a complex wish to on the one hand to be a succeeding artist-entrepreneur and on the other hand to distance oneself from all measurable aspects of the entrepreneur lifestyle. This is a contradicting desire because our content is at stake! Who wants to risk their sincerity (or their work's sincerity) by associating too much with market or state?
 <br><br>
@@ -392,33 +392,37 @@ $('#visuals').click(function(){
 if ($("#theperiphery, #theonlyway").hasClass("state-1")) {
     $("#theperiphery, #theonlyway").removeClass("state-1")
     $("#theperiphery, #theonlyway").addClass("state-2")
+            $("img").css("filter","none")
 }
 else if($("#theperiphery, #theonlyway").hasClass("state-2")) {
     $("#theperiphery, #theonlyway").removeClass("state-2")
     $("#theperiphery, #theonlyway").addClass("state-3")
+            $("img").css("filter","hue-rotate(-290deg)")
 }
 else if($("#theperiphery, #theonlyway").hasClass("state-3")){
     $("#theperiphery, #theonlyway").removeClass("state-3")
     $("#theperiphery, #theonlyway").addClass("state-4")
+            $("img").css("filter","hue-rotate(-190deg)")
 }
 else if($("#theperiphery, #theonlyway").hasClass("state-3")) {
     $("#theperiphery, #theonlyway").removeClass("state-3")
     $("#theperiphery, #theonlyway").addClass("state-4")
+            $("img").css("filter","none")
 }
 else if($("#theperiphery, #theonlyway").hasClass("state-4")){
     $("#theperiphery, #theonlyway").removeClass("state-4")
     $("#theperiphery, #theonlyway").addClass("state-5")
+    $("img").css("filter","invert(100%)");
 }
 else if($("#theperiphery, #theonlyway").hasClass("state-5")){
     $("#theperiphery, #theonlyway").removeClass("state-5")
+        $("img").css("filter","none")
 }
 else {
     $("#theperiphery, #theonlyway").addClass("state-1")
+        $("img").css("filter","invert(100%) hue-rotate(-260deg)")
 }
     
-if($("#theperiphery").css("filter","invert(100%)")){
-     $("img").css("filter","invert(100%)")
-     }
 });
 
 });
